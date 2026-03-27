@@ -37,7 +37,9 @@ function Nav() {
           </span>
         </div>
         <a
-          href="#book-call"
+          href="https://platform.tsunamiautomation.com/widget/booking/roImsup61eT1dSYsebMS"
+          target="_blank"
+          rel="noopener noreferrer"
           className="bg-green-500 hover:bg-green-400 text-black font-semibold px-5 py-2 rounded-lg text-sm transition-colors"
         >
           Book a Free Call
@@ -76,7 +78,9 @@ function Hero() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="#book-call"
+            href="https://platform.tsunamiautomation.com/widget/booking/roImsup61eT1dSYsebMS"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full sm:w-auto bg-green-500 hover:bg-green-400 text-black font-bold px-8 py-4 rounded-xl text-base transition-colors flex items-center justify-center gap-2 glow-green"
           >
             Book Your Free Audit Call
@@ -599,7 +603,9 @@ function Guarantee() {
             </div>
 
             <a
-              href="#book-call"
+              href="https://platform.tsunamiautomation.com/widget/booking/roImsup61eT1dSYsebMS"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-black font-bold px-8 py-4 rounded-xl text-base transition-colors"
             >
               Claim your free audit call
@@ -740,11 +746,25 @@ function AuditCallForm() {
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Book your free audit call
           </h2>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-400 text-lg mb-8">
             30 minutes. No sales pressure. We&apos;ll map your pipeline, find
             the gaps, and show you exactly what automation could do for your
             business.
           </p>
+          <a
+            href="https://platform.tsunamiautomation.com/widget/booking/roImsup61eT1dSYsebMS"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-black font-bold px-8 py-4 rounded-xl text-base transition-colors glow-green mb-6"
+          >
+            Pick a time on my calendar
+            <ArrowRight className="w-4 h-4" />
+          </a>
+          <div className="flex items-center gap-3 my-6">
+            <div className="flex-1 h-px bg-gray-800" />
+            <span className="text-gray-600 text-sm">or fill out the form below</span>
+            <div className="flex-1 h-px bg-gray-800" />
+          </div>
         </div>
 
         {state === 'success' ? (
