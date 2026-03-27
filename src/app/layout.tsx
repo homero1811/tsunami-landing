@@ -4,12 +4,12 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Tsunami Automation — Automate your pipeline. Close more deals.',
   description:
-    'Tsunami Automation builds custom AI + automation systems for growth-focused businesses. We handle the tech. You focus on closing. Set up in 2 weeks. Results in 90 days.',
+    'Tsunami Automation designs, builds, and maintains custom automation systems for modern service businesses. Starter plans from $120/mo. 10+ hours freed per month, guaranteed.',
   openGraph: {
     title: 'Tsunami Automation — Automate your pipeline. Close more deals.',
     description:
-      'Custom automation systems that generate pipeline and reduce manual work. Starter plans from $299/mo.',
-    url: 'https://tsunamiautomation.com',
+      'Custom automation systems for modern service businesses. Reduce manual work, close more deals. Starter plans from $120/mo.',
+    url: 'https://growthos.tsunamiautomation.com',
     siteName: 'Tsunami Automation',
     type: 'website',
   },
@@ -17,9 +17,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Tsunami Automation — Automate your pipeline. Close more deals.',
     description:
-      'Custom automation systems that generate pipeline and reduce manual work.',
+      'Custom automation systems for modern service businesses. 10+ hours freed per month, guaranteed.',
   },
-  metadataBase: new URL('https://tsunamiautomation.com'),
+  metadataBase: new URL('https://growthos.tsunamiautomation.com'),
 }
 
 export default function RootLayout({

@@ -13,6 +13,13 @@ import {
   Star,
   Shield,
   Users,
+  MessageSquare,
+  BarChart2,
+  Briefcase,
+  Database,
+  BookOpen,
+  Link2,
+  Award,
 } from 'lucide-react'
 
 // ─── Nav ───────────────────────────────────────────────────────────────────
@@ -61,9 +68,10 @@ function Hero() {
         </h1>
 
         <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-          We build custom AI + automation systems for growth-focused businesses.
-          You get more leads, fewer no-shows, and a pipeline that runs while you
-          sleep. Set up in 2 weeks. Results in 90 days.
+          Tsunami Automation designs, builds, and maintains custom automation
+          systems for modern service businesses — connecting your tools, reducing
+          manual work, and giving your team time back to focus on clients and
+          growth.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -154,27 +162,45 @@ function PainPoints() {
   )
 }
 
-// ─── How It Works ────────────────────────────────────────────────────────────
+// ─── How It Works (Growth OS) ────────────────────────────────────────────────
 
 function HowItWorks() {
   const steps = [
     {
       number: '01',
-      icon: <PhoneCall className="w-6 h-6" />,
-      title: 'Free 30-min audit call',
-      body: "We map your current pipeline, find the biggest leaks, and show you exactly what we'd automate. No sales pitch — just clarity.",
+      icon: <PhoneCall className="w-5 h-5" />,
+      title: 'Discovery',
+      body: 'We map your actual workflows end-to-end — where time is lost, where leads fall through, and where manual work slows you down.',
     },
     {
       number: '02',
-      icon: <Zap className="w-6 h-6" />,
-      title: 'We build your automation stack',
-      body: 'Our team designs and deploys your custom automation — lead capture, follow-up sequences, booking flows, and reporting. Done in 2 weeks.',
+      icon: <Zap className="w-5 h-5" />,
+      title: 'Blueprint',
+      body: 'We design your custom operating system — connecting your tools, defining your automations, and building the architecture before writing a single line.',
     },
     {
       number: '03',
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: 'Your pipeline runs on autopilot',
-      body: 'Leads come in, get nurtured, and book calls — without you lifting a finger. You close. We automate. That&apos;s the deal.',
+      icon: <Briefcase className="w-5 h-5" />,
+      title: 'Implementation',
+      body: 'We build and connect your systems. Automation goes live, integrations are wired, and your pipeline starts running without manual intervention.',
+    },
+    {
+      number: '04',
+      icon: <TrendingUp className="w-5 h-5" />,
+      title: 'Testing & Optimization',
+      body: 'We stress-test every workflow, fix edge cases, and tune performance before handing anything over. No surprises on day one.',
+    },
+    {
+      number: '05',
+      icon: <BookOpen className="w-5 h-5" />,
+      title: 'Training & Enablement',
+      body: 'Your team gets full walkthroughs, documentation, and the knowledge to run the system confidently without us holding their hand.',
+    },
+    {
+      number: '06',
+      icon: <Shield className="w-5 h-5" />,
+      title: 'Ongoing Support & Growth',
+      body: 'We monitor, maintain, and evolve your automation as your business grows. Your system gets smarter over time — not stale.',
     },
   ]
 
@@ -182,38 +208,131 @@ function HowItWorks() {
     <section id="how-it-works" className="py-20 px-4 sm:px-6">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-14">
+          <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 text-green-400 text-xs font-bold px-3 py-1.5 rounded-full mb-4 tracking-widest uppercase">
+            The Growth OS Process
+          </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            How it works
+            How we build your system
           </h2>
           <p className="text-gray-400 text-lg max-w-xl mx-auto">
-            From audit call to live automation in 3 steps.
+            Six steps from first call to fully running automation — designed to
+            deliver results, not just deliverables.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
           {steps.map((step) => (
-            <div key={step.number} className="relative">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-green-500/10 border border-green-500/20 rounded-xl flex items-center justify-center text-green-500">
-                    {step.icon}
-                  </div>
+            <div
+              key={step.number}
+              className="bg-gray-900 border border-gray-800 rounded-2xl p-5"
+            >
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-9 h-9 bg-green-500/10 border border-green-500/20 rounded-lg flex items-center justify-center text-green-500 flex-shrink-0">
+                  {step.icon}
                 </div>
-                <div>
-                  <div className="text-green-500 text-xs font-bold tracking-widest uppercase mb-1">
-                    Step {step.number}
-                  </div>
-                  <h3 className="text-white font-semibold text-lg mb-2">
-                    {step.title}
-                  </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">
-                    {step.body}
-                  </p>
+                <div className="text-green-500 text-xs font-bold tracking-widest uppercase">
+                  {step.number}
                 </div>
+              </div>
+              <h3 className="text-white font-semibold text-base mb-2">
+                {step.title}
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                {step.body}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// ─── Services ────────────────────────────────────────────────────────────────
+
+function Services() {
+  const services = [
+    {
+      icon: <MessageSquare className="w-5 h-5" />,
+      title: 'Client Engagement',
+      body: 'Automated lead capture, instant follow-up sequences, and rebooking flows that keep prospects moving without manual effort.',
+      price: 'From $2,000',
+    },
+    {
+      icon: <BarChart2 className="w-5 h-5" />,
+      title: 'Marketing & Sales',
+      body: 'Full pipeline automation, multi-channel outreach, and revenue visibility so you always know what\'s working and what\'s not.',
+      price: 'From $1,500',
+    },
+    {
+      icon: <Briefcase className="w-5 h-5" />,
+      title: 'Operations & Management',
+      body: 'Project tracking, team coordination, and status updates automated so your team spends time on work — not reporting on it.',
+      price: 'From $1,200',
+    },
+    {
+      icon: <Database className="w-5 h-5" />,
+      title: 'Data & Analytics',
+      body: 'Performance dashboards and automated reporting that give you real-time visibility without manually pulling numbers.',
+      price: 'From $1,500',
+    },
+    {
+      icon: <BookOpen className="w-5 h-5" />,
+      title: 'Training & Support',
+      body: 'Team enablement, documentation, and ongoing support so your people can run and trust the systems we build.',
+      price: 'From $800',
+    },
+    {
+      icon: <Link2 className="w-5 h-5" />,
+      title: 'Custom Integration',
+      body: 'Connect your existing tools — CRM, calendar, billing, communication — into one unified operating system with AI assistants.',
+      price: 'From $2,000',
+    },
+  ]
+
+  return (
+    <section id="services" className="py-20 px-4 sm:px-6 bg-gray-950">
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-14">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+            Six systems. One operating layer.
+          </h2>
+          <p className="text-gray-400 text-lg max-w-xl mx-auto">
+            We don&apos;t automate in isolation. Every system we build connects
+            to the others — so your whole business runs smoother, not just one
+            department.
+          </p>
+        </div>
+
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
+          {services.map((s) => (
+            <div
+              key={s.title}
+              className="bg-gray-900 border border-gray-800 rounded-2xl p-5 flex flex-col"
+            >
+              <div className="w-9 h-9 bg-green-500/10 border border-green-500/20 rounded-lg flex items-center justify-center text-green-500 mb-4">
+                {s.icon}
+              </div>
+              <h3 className="text-white font-semibold text-base mb-2">
+                {s.title}
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed flex-1">
+                {s.body}
+              </p>
+              <div className="mt-4 text-green-500 text-xs font-semibold">
+                {s.price}
               </div>
             </div>
           ))}
         </div>
+
+        <p className="text-center text-gray-500 text-sm mt-8">
+          Implementation modules are scoped per project.{' '}
+          <a href="#book-call" className="text-green-500 hover:text-green-400">
+            Book a call
+          </a>{' '}
+          to get a custom quote.
+        </p>
       </div>
     </section>
   )
@@ -286,40 +405,23 @@ function Results() {
           </div>
         </div>
 
-        {/* Trust indicators */}
-        <div className="mt-10 grid sm:grid-cols-3 gap-6">
-          <div className="flex items-start gap-3">
-            <Shield className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-            <div>
-              <div className="text-white font-semibold text-sm mb-0.5">
-                No lock-in
-              </div>
-              <div className="text-gray-500 text-xs">
-                Month-to-month plans. Cancel anytime.
-              </div>
-            </div>
+        {/* Stats grid */}
+        <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div className="bg-gray-900 border border-gray-800 rounded-xl p-5 text-center">
+            <div className="text-3xl font-black text-green-400 mb-1">10+</div>
+            <div className="text-gray-400 text-xs">Hours saved per month</div>
           </div>
-          <div className="flex items-start gap-3">
-            <Clock className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-            <div>
-              <div className="text-white font-semibold text-sm mb-0.5">
-                2-week setup
-              </div>
-              <div className="text-gray-500 text-xs">
-                Live automation in under 14 days, guaranteed.
-              </div>
-            </div>
+          <div className="bg-gray-900 border border-gray-800 rounded-xl p-5 text-center">
+            <div className="text-3xl font-black text-green-400 mb-1">90%</div>
+            <div className="text-gray-400 text-xs">Fewer manual errors</div>
           </div>
-          <div className="flex items-start gap-3">
-            <Users className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-            <div>
-              <div className="text-white font-semibold text-sm mb-0.5">
-                Dedicated support
-              </div>
-              <div className="text-gray-500 text-xs">
-                Your automation is maintained and monitored by us.
-              </div>
-            </div>
+          <div className="bg-gray-900 border border-gray-800 rounded-xl p-5 text-center">
+            <div className="text-3xl font-black text-green-400 mb-1">50%</div>
+            <div className="text-gray-400 text-xs">Better lead conversion</div>
+          </div>
+          <div className="bg-gray-900 border border-gray-800 rounded-xl p-5 text-center">
+            <div className="text-3xl font-black text-green-400 mb-1">2–3×</div>
+            <div className="text-gray-400 text-xs">Faster follow-up times</div>
           </div>
         </div>
       </div>
@@ -335,45 +437,41 @@ function Pricing() {
       name: 'Starter',
       price: '$120',
       period: '/mo',
-      description: 'Core automation for businesses just getting started.',
+      description: 'One workspace. Core workflows and contact management.',
       featured: false,
       features: [
-        'Lead capture & intake automation',
-        'Automated follow-up sequences (email + SMS)',
-        'Appointment reminder system',
-        'Monthly performance report',
-        'Slack/email support',
+        '1 workspace',
+        'Core workflow & contact management',
+        'Basic email support',
+        'Growth OS service eligible',
       ],
     },
     {
       name: 'Growth',
       price: '$210',
       period: '/mo',
-      description: 'Full pipeline automation for teams ready to scale.',
+      description: 'Higher capacity, multi-channel automation, priority support.',
       featured: true,
       features: [
         'Everything in Starter',
-        'AI-powered lead qualification',
-        'CRM integration & sync',
-        'Multi-channel outreach (email, SMS, WhatsApp)',
-        'A/B tested follow-up sequences',
-        'Weekly strategy call',
-        'Priority support',
+        'Higher lead & automation capacity',
+        'Multi-channel automation (email, SMS, WhatsApp)',
+        'Priority incident support',
+        'Growth OS service eligible',
       ],
     },
     {
       name: 'Unlimited',
       price: '$600',
-      period: '/mo + $300 setup',
-      description: 'White-glove buildout for hands-off business owners.',
+      period: '/mo',
+      description: 'Max capacity for multi-location or multi-brand operations.',
       featured: false,
       features: [
         'Everything in Growth',
-        'Custom automation architecture',
-        'Full workflow audit & redesign',
-        'Dedicated account manager',
-        'Same-day support SLA',
-        'Quarterly strategy review',
+        'Maximum pipeline & campaign capacity',
+        'Multi-location or multi-brand support',
+        'Highest-priority support routing',
+        'Ongoing Growth OS implementation',
       ],
     },
   ]
@@ -443,13 +541,72 @@ function Pricing() {
           ))}
         </div>
 
-        <p className="text-center text-gray-500 text-sm mt-8">
-          Not sure which plan is right for you?{' '}
-          <a href="#book-call" className="text-green-500 hover:text-green-400">
-            Book a free audit call
-          </a>{' '}
-          — we&apos;ll recommend the right fit.
-        </p>
+        <div className="mt-8 bg-gray-900 border border-gray-800 rounded-xl px-6 py-4 text-center max-w-xl mx-auto">
+          <p className="text-gray-400 text-sm">
+            <span className="text-white font-medium">$300 one-time setup fee</span> covers workspace configuration, core tool integration, and onboarding.
+            Implementation modules (client engagement, marketing, operations, etc.) are scoped separately.{' '}
+            <a href="#book-call" className="text-green-500 hover:text-green-400">
+              Book a call
+            </a>{' '}
+            to get a custom quote.
+          </p>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// ─── Guarantee ───────────────────────────────────────────────────────────────
+
+function Guarantee() {
+  return (
+    <section className="py-20 px-4 sm:px-6">
+      <div className="max-w-4xl mx-auto">
+        <div className="bg-green-500/5 border border-green-500/20 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden">
+          {/* Background glow */}
+          <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent pointer-events-none" />
+
+          <div className="relative">
+            <div className="w-14 h-14 bg-green-500/10 border border-green-500/20 rounded-2xl flex items-center justify-center text-green-500 mx-auto mb-6">
+              <Award className="w-7 h-7" />
+            </div>
+
+            <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 text-green-400 text-xs font-bold px-3 py-1.5 rounded-full mb-6 tracking-widest uppercase">
+              Our Guarantee
+            </div>
+
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 max-w-2xl mx-auto leading-snug">
+              10+ hours freed per month within 60 days — or we keep working for free.
+            </h2>
+
+            <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+              If your automation system does not free at least 10 hours per month within 60 days of go-live, we keep working at no additional cost until it does.
+            </p>
+
+            <div className="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto mb-10">
+              <div className="bg-black/40 border border-gray-800 rounded-xl p-4">
+                <div className="text-green-400 font-bold text-sm mb-1">Time Freed</div>
+                <div className="text-gray-400 text-xs">10+ hours/month within 60 days of go-live</div>
+              </div>
+              <div className="bg-black/40 border border-gray-800 rounded-xl p-4">
+                <div className="text-green-400 font-bold text-sm mb-1">Quality</div>
+                <div className="text-gray-400 text-xs">90-day bug-fix coverage at no extra cost</div>
+              </div>
+              <div className="bg-black/40 border border-gray-800 rounded-xl p-4">
+                <div className="text-green-400 font-bold text-sm mb-1">Satisfaction</div>
+                <div className="text-gray-400 text-xs">Continued improvement or activation fee credit</div>
+              </div>
+            </div>
+
+            <a
+              href="#book-call"
+              className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-400 text-black font-bold px-8 py-4 rounded-xl text-base transition-colors"
+            >
+              Claim your free audit call
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   )
@@ -746,10 +903,10 @@ function Footer() {
         </div>
         <div className="flex items-center gap-5 text-gray-500 text-sm">
           <a
-            href="mailto:hello@tsunamiautomation.com"
+            href="mailto:contact@tsunamiautomation.com"
             className="hover:text-gray-300 transition-colors"
           >
-            hello@tsunamiautomation.com
+            contact@tsunamiautomation.com
           </a>
         </div>
       </div>
@@ -766,8 +923,10 @@ export default function Home() {
       <Hero />
       <PainPoints />
       <HowItWorks />
+      <Services />
       <Results />
       <Pricing />
+      <Guarantee />
       <FAQ />
       <AuditCallForm />
       <Footer />
