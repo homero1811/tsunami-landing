@@ -923,6 +923,12 @@ function Footer() {
         </div>
         <div className="flex items-center gap-5 text-gray-500 text-sm">
           <a
+            href="/intake"
+            className="hover:text-gray-300 transition-colors"
+          >
+            Client Intake
+          </a>
+          <a
             href="mailto:contact@tsunamiautomation.com"
             className="hover:text-gray-300 transition-colors"
           >
